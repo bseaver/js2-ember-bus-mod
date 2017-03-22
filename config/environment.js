@@ -17,6 +17,13 @@ module.exports = function(environment) {
       }
     },
 
+    firebase: {
+      apiKey: "AIzaSyDdw9tCPOn50cAfc4bwUOYv3Orea1LOnPE",
+      authDomain: "business-model-tracking.firebaseapp.com",
+      databaseURL: "https://business-model-tracking.firebaseio.com",
+      storageBucket: "business-model-tracking.appspot.com"
+    },
+
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

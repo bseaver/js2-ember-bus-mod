@@ -64,3 +64,9 @@ Specify what it takes to deploy your app.
   * ember install ember-bootstrap
   * ember g route index
   * manually added /templates/application.hbs
+  * manually created business-model-blog.json
+  * imported that into FireBase
+  * ember g model businessModel
+  * ember install emberfire
+  * add firebase env info to config/environment.js
+  
