@@ -70,3 +70,8 @@ Specify what it takes to deploy your app.
   * ember install emberfire
   * add firebase env info to config/environment.js
   * ember g component customer-segment-tile
+  * ember g component nav-bar
+  * ember g route business
+  * ember g component business-model-tile
+  * ember g route about
+  * ember g route contact

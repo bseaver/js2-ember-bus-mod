@@ -1,0 +1,66 @@
+<div class="row">
+  <h2 class="text-center">Title: {{model.title}}, Version: {{model.version}}, Author: {{model.author}}, Date: {{model.date}}</h2>
+
+</div>
+<div class="row">
+  <div class="col-lg-2">
+    <div class="well long">
+      {{key-partners keyPartners=model.keyPartners}}
+
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <div class="row">
+      <div class="well short">
+        {{key-activities}}
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="well short">
+        {{key-resources}}
+
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-4">
+    <div class="well long">
+      {{value-propositions}}
+
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <div class="row">
+      <div class="well short">
+        {{customer-relationships}}
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="well short">
+        {{sales-channels}}
+
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2">
+    <div class="well long">
+      {{customer-segments customerSegments=model.customerSegments}}
+
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-lg-6">
+    <div class="well short">
+      {{cost-structures}}
+
+    </div>
+  </div>
+  <div class="col-lg-6">
+    <div class="well short">
+      {{revenue-streams}}
+
+    </div>
+  </div>
+</div>
