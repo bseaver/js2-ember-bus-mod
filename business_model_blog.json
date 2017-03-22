@@ -1,5 +1,6 @@
 {"plans": [{
-  "title": "Bars business 1.0",
+  "title": "Bars business",
+  "version": "1.0",
   "author": "Jimmy Bob",
   "date": "12/31/14",
   "keyPartners": [

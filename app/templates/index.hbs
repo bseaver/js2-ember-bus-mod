@@ -2,12 +2,13 @@
 {{#each model as |post|}}
 
   <div class="row">
-    <h2>Title: {{post.title}}, Author: {{post.author}}, Date: {{post.date}}</h2>
+    <h2>Title: {{post.title}}, Version: {{post.version}}, Author: {{post.author}}, Date: {{post.date}}</h2>
+
   </div>
   <div class="row">
     <div class="col-lg-2">
       <div class="well long">
-        {{key-partners}}
+        {{key-partners keyPartners=post.keyPartners}}
 
       </div>
     </div>
@@ -25,7 +26,7 @@
         </div>
       </div>
     </div>
-    <div class="col-lg-2">
+    <div class="col-lg-4">
       <div class="well long">
         {{value-propositions}}
 
@@ -47,19 +48,19 @@
     </div>
     <div class="col-lg-2">
       <div class="well long">
-        {{customer-segments}}
+        {{customer-segments customerSegments=post.customerSegments}}
 
       </div>
     </div>
   </div>
   <div class="row">
-    <div class="col-lg-5">
+    <div class="col-lg-6">
       <div class="well short">
         {{cost-structures}}
 
       </div>
     </div>
-    <div class="col-lg-5">
+    <div class="col-lg-6">
       <div class="well short">
         {{revenue-streams}}
 

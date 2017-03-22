@@ -69,4 +69,4 @@ Specify what it takes to deploy your app.
   * ember g model businessModel
   * ember install emberfire
   * add firebase env info to config/environment.js
-  
+  * ember g component customer-segment-tile
