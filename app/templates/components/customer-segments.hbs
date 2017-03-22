@@ -1,24 +1,11 @@
 <h3>Customer Segments</h3>
-{{#each plan.customerSegments as |customerSegment|}}
-  {{customer-segment-tile customerSegment=customerSegment}}
-{{/each}}
-
-{{#if addNewCustomerSegment}}
-  <h1>New Customer Segment</h1>
-  <div>
-    <form>
-      <div class="form-group">
-        <label for="tag">Tag</label>
-        {{input value=tag id="tag"}}
-      </div>
-
-      <div class="form-group">
-        <label for="details">details</label>
-        {{input value=details id="details"}}
-      </div>
-      <button {{action 'saveCustomerSegment' plan}}>Save</button>
-    </form>
+{{#each plan.customerSegments as |segment|}}
+<div class="panel">
+  <div class="panel-heading">
+    <h2 class="panel-title">{{segment.tag}}</h2>
   </div>
-{{else}}
-  <button {{action 'customerSegmentFormShow'}}>New</button>
-{{/if}}
+  <div class="panel-body">
+    <h3>{{segment.details}}</h3>
+  </div>
+</div>
+{{/each}}

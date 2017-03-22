@@ -5,6 +5,8 @@
 
 
 <h3>Current Models</h3>
+<!-- loops through each business model plan in the data store -->
 {{#each model as |plan|}}
+  <!-- passes individual plan to business-model-tile to show titles of plans -->
   {{business-model-tile plan=plan}}
 {{/each}}

@@ -5,7 +5,7 @@
 <div class="row">
   <div class="col-lg-2">
     <div class="well long">
-      {{key-partners keyPartners=model.keyPartners}}
+      {{key-partners}}
 
     </div>
   </div>
@@ -45,7 +45,8 @@
   </div>
   <div class="col-lg-2">
     <div class="well long">
-      {{customer-segments plan=model updatePlan="updatePlan"}}
+      {{customer-segments plan=model}}
+      {{new-customer-segment saveCustomerSegment="saveCustomerSegment" plan=model }}
 
     </div>
   </div>
