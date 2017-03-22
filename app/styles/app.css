@@ -1,0 +1,7 @@
+.well.short {
+  min-height: 200px;
+}
+
+.well.long {
+  min-height: 420px;
+}
