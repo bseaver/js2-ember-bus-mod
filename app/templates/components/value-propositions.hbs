@@ -4,12 +4,9 @@
   <ul>
     <li>{{valueProposition.details}}</li>
   </ul>
-  <div class="row">
-    <div class="col-sm-6">
-      {{update-form thisComponent=valueProposition hasCustomerSegment=true update="update"}}
-    </div>
-    <div class="col-sm-6">
-      <button {{action 'delete' valueProposition}}>Delete </button>
-    </div>
-  </div>
+  
+  {{update-form thisComponent=valueProposition hasCustomerSegment=true update="update"}}
+
+  <button {{action 'delete' valueProposition}}>Delete </button>
+
 {{/each}}

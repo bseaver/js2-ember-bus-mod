@@ -5,3 +5,7 @@
 .well.long {
   min-height: 420px;
 }
+
+textarea {
+  min-width: 100%;
+}

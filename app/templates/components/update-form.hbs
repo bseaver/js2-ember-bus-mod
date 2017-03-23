@@ -16,7 +16,7 @@
 
       <div class="form-group">
         <label for="details">Details</label>
-        {{input value=thisComponent.details id="details"}}
+        {{textarea rows="5" value=thisComponent.details id="details"}}
       </div>
 
       <button {{action 'update' thisComponent}}>Update</button>

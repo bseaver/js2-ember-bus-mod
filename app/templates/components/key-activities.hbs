@@ -4,12 +4,9 @@
   <ul>
     <li>{{keyActivity.details}}</li>
   </ul>
-  <div class="row">
-    <div class="col-sm-6">
-      {{update-form thisComponent=keyActivity hasCustomerSegment=false update="update"}}
-    </div>
-    <div class="col-sm-6">
-      <button {{action 'delete' keyActivity}}>Delete </button>
-    </div>
-  </div>
+
+  {{update-form thisComponent=keyActivity hasCustomerSegment=false update="update"}}
+
+  <button {{action 'delete' keyActivity}}>Delete </button>
+
 {{/each}}

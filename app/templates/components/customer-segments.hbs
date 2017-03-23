@@ -1,17 +1,13 @@
 <h3>Customer Segments</h3>
 {{#each plan.customerSegments as |segment|}}
-{{segment.tag}}
+  {{segment.tag}}
   <ul>
     <li>{{segment.details}}</li>
   </ul>
-  <div class="row">
-    <div class="col-sm-6">
-      {{update-form thisComponent=segment hasCustomerSegment=false update="update"}}
-    </div>
-    <div class="col-sm-6">
-      <button {{action 'delete' segment}}>Delete </button>
-    </div>
-  </div>
+
+  {{update-form thisComponent=segment hasCustomerSegment=false update="update"}}
+
+  <button {{action 'delete' segment}}>Delete </button>
 
 
 {{/each}}

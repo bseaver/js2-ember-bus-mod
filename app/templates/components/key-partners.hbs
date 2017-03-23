@@ -4,12 +4,9 @@
   <ul>
     <li>{{keyPartner.details}}</li>
   </ul>
-  <div class="row">
-    <div class="col-sm-6">
-      {{update-form thisComponent=keyPartner hasCustomerSegment=false update="update"}}
-    </div>
-    <div class="col-sm-6">
-      <button {{action 'delete' keyPartner}}>Delete </button>
-    </div>
-  </div>
+
+  {{update-form thisComponent=keyPartner hasCustomerSegment=false update="update"}}
+
+  <button {{action 'delete' keyPartner}}>Delete </button>
+
 {{/each}}

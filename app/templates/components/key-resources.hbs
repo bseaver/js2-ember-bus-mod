@@ -4,12 +4,9 @@
   <ul>
     <li>{{keyResource.details}}</li>
   </ul>
-  <div class="row">
-    <div class="col-sm-6">
-      {{update-form thisComponent=keyResource hasCustomerSegment=false update="update"}}
-    </div>
-    <div class="col-sm-6">
-      <button {{action 'delete' keyResource}}>Delete </button>
-    </div>
-  </div>
+
+  {{update-form thisComponent=keyResource hasCustomerSegment=false update="update"}}
+
+  <button {{action 'delete' keyResource}}>Delete </button>
+
 {{/each}}
