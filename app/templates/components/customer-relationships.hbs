@@ -1,16 +1,22 @@
 <h3>Customer Relationships</h3>
 {{#each plan.customerRelationships as |relationship|}}
+  <div class="row">
+    <div class="tag-box">
+      <strong>{{relationship.tag}} | {{relationship.customerSegment}}</strong>
+    </div>
 
-  {{relationship.tag}} | {{relationship.customerSegment}}
+  </div>
+  <div class="row">
+    <div class="detail-box">
+      {{relationship.details}}
+    </div>
 
-  <ul>
-    <li>{{relationship.details}}</li>
-  </ul>
+  </div>
+  <div class="row">
+    {{update-form thisComponent=relationship hasCustomerSegment=true update="update"}}
 
-  {{update-form thisComponent=relationship hasCustomerSegment=true update="update"}}
+    <button {{action 'delete' relationship}}>Delete </button>
 
-  <button {{action 'delete' relationship}}>Delete </button>
-
-
+  </div>
 
 {{/each}}

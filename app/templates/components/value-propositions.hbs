@@ -1,12 +1,20 @@
 <h3>Value Propositions</h3>
 {{#each plan.valuePropositions as |valueProposition|}}
-  {{valueProposition.tag}} | {{valueProposition.customerSegment}}
-  <ul>
-    <li>{{valueProposition.details}}</li>
-  </ul>
-  
-  {{update-form thisComponent=valueProposition hasCustomerSegment=true update="update"}}
+  <div class="row">
+    <div class="tag-box">
+      <strong>{{valueProposition.tag}} | {{valueProposition.customerSegment}}</strong>
+    </div>
 
-  <button {{action 'delete' valueProposition}}>Delete </button>
+  </div>
+  <div class="row">
+    <div class="detail-box">
+      {{valueProposition.details}}
+    </div>
 
+  </div>
+  <div class="row">
+    {{update-form thisComponent=valueProposition hasCustomerSegment=true update="update"}}
+
+    <button {{action 'delete' valueProposition}}>Delete </button>
+  </div>
 {{/each}}

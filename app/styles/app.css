@@ -1,21 +1,34 @@
-/*.well.short {
+.well.short {
   min-height: 200px;
 }
 
 .well.long {
   min-height: 420px;
-}*/
-
-.content {
-    overflow: hidden;
 }
-
-.navigation {
-    padding-bottom: 100%;
-    margin-bottom: -100%;
-}
-
 
 textarea {
   min-width: 100%;
+}
+
+.tag-box {
+  min-width: 100%;
+}
+
+.detail-box {
+  min-width: 100%;
+  border: 2px solid darkgray;
+  margin-bottom: 3px;
+}
+
+button {
+  margin-bottom: 3px;
+}
+
+.long .row, .short .row {
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.well h3 {
+  margin-top: 0%;
 }

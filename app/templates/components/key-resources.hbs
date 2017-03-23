@@ -1,12 +1,22 @@
 <h3>Key Resources</h3>
 {{#each plan.keyResources as |keyResource|}}
-  {{keyResource.tag}}
-  <ul>
-    <li>{{keyResource.details}}</li>
-  </ul>
+  <div class="row">
+    <div class="tag-box">
+      <strong>{{keyResource.tag}}</strong>
+    </div>
 
-  {{update-form thisComponent=keyResource hasCustomerSegment=false update="update"}}
+  </div>
+  <div class="row">
+    <div class="detail-box">
+      {{keyResource.details}}
+    </div>
 
-  <button {{action 'delete' keyResource}}>Delete </button>
+  </div>
 
+  <div class="row">
+    {{update-form thisComponent=keyResource hasCustomerSegment=false update="update"}}
+
+    <button {{action 'delete' keyResource}}>Delete </button>
+
+  </div>
 {{/each}}

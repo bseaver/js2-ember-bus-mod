@@ -1,14 +1,20 @@
 <h3>Sales Channels</h3>
 {{#each plan.salesChannels as |salesChannel|}}
+  <div class="row">
+    <div class="tag-box">
+      <strong>{{salesChannel.tag}} | {{salesChannel.customerSegment}}</strong>
+    </div>
 
-  {{salesChannel.tag}} | {{salesChannel.customerSegment}}
+  </div>
+  <div class="row">
+    <div class="detail-box">
+      {{salesChannel.details}}
+    </div>
 
-  <ul>
-    <li>{{salesChannel.details}}</li>
-  </ul>
+  </div>
+  <div class="row">
+    {{update-form thisComponent=salesChannel hasCustomerSegment=true update="update"}}
 
-  {{update-form thisComponent=salesChannel hasCustomerSegment=true update="update"}}
-
-  <button {{action 'delete' salesChannel}}>Delete </button>
-
+    <button {{action 'delete' salesChannel}}>Delete </button>
+  </div>
 {{/each}}

@@ -7,7 +7,7 @@ export default Ember.Component.extend({
     },
 
     delete(segment) {
-      this.sendAction('destroyComponent', segment, 'customer segment');
+      this.sendAction('destroyComponent', segment, 'Customer Segment');
     }
 
   }

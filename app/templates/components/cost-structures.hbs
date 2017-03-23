@@ -1,12 +1,22 @@
 <h3>Cost Structures</h3>
 {{#each plan.costStructures as |costStructure|}}
-  {{costStructure.tag}}
-  <ul>
-    <li>{{costStructure.details}}</li>
-  </ul>
+  <div class="row">
+    <div class="tag-box">
+      <strong>{{costStructure.tag}}</strong>
+    </div>
 
-  {{update-form thisComponent=costStructure hasCustomerSegment=false update="update"}}
+  </div>
+  <div class="row">
+    <div class="detail-box">
+      {{costStructure.details}}
 
-  <button {{action 'delete' costStructure}}>Delete </button>
+    </div>
 
+  </div>
+  <div class="row">
+    {{update-form thisComponent=costStructure hasCustomerSegment=false update="update"}}
+
+    <button {{action 'delete' costStructure}}>Delete </button>
+
+  </div>
 {{/each}}

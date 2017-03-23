@@ -8,12 +8,12 @@
       </div>
 
       <div class="form-group">
-        <label for="customerSegment">customerSegment</label>
+        <label for="customerSegment">Customer Segment</label>
         {{input value=customerSegment class="customerSegment"}}
       </div>
 
       <div class="form-group">
-        <label for="details">details</label>
+        <label for="details">Details</label>
         {{input value=details class="details"}}
       </div>
 
@@ -21,5 +21,8 @@
     </form>
   </div>
 {{else}}
-  <button {{action 'revenueStreamFormShow'}}>Add a Revenue Stream</button>
+<div class="row new-button">
+  <button {{action 'revenueStreamFormShow'}}>New</button>
+
+</div>
 {{/if}}

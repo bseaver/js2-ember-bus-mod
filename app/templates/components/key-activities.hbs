@@ -1,12 +1,17 @@
 <h3>Key Activities</h3>
 {{#each plan.keyActivities as |keyActivity|}}
-  {{keyActivity.tag}}
-  <ul>
-    <li>{{keyActivity.details}}</li>
-  </ul>
-
-  {{update-form thisComponent=keyActivity hasCustomerSegment=false update="update"}}
-
-  <button {{action 'delete' keyActivity}}>Delete </button>
-
+  <div class="row">
+    <div class="tag-box">
+      <strong>{{keyActivity.tag}}</strong>
+    </div>
+  </div>
+  <div class="row">
+    <div class="detail-box">
+      {{keyActivity.details}}
+    </div>
+  </div>
+  <div class="row">
+    {{update-form thisComponent=keyActivity hasCustomerSegment=false update="update"}}
+    <button {{action 'delete' keyActivity}}>Delete </button>
+  </div>
 {{/each}}

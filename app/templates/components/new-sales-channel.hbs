@@ -8,12 +8,12 @@
       </div>
 
       <div class="form-group">
-        <label for="customerSegment">customerSegment</label>
+        <label for="customerSegment">Customer Segment</label>
         {{input value=customerSegment class="customerSegment"}}
       </div>
 
       <div class="form-group">
-        <label for="details">details</label>
+        <label for="details">Details</label>
         {{input value=details class="details"}}
       </div>
 
@@ -21,5 +21,5 @@
     </form>
   </div>
 {{else}}
-  <button {{action 'salesChannelFormShow'}}>Add a Sales Channel</button>
+  <button {{action 'salesChannelFormShow'}}>New</button>
 {{/if}}

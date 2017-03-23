@@ -1,12 +1,23 @@
 <h3>Key Partners</h3>
 {{#each plan.keyPartners as |keyPartner|}}
-  {{keyPartner.tag}}
-  <ul>
-    <li>{{keyPartner.details}}</li>
-  </ul>
+  <div class="row">
+    <div class="tag-box">
+      <strong>{{keyPartner.tag}}</strong>
+    </div>
 
-  {{update-form thisComponent=keyPartner hasCustomerSegment=false update="update"}}
+  </div>
+  <div class="row">
+    <div class="detail-box">
+      {{keyPartner.details}}
+    </div>
 
-  <button {{action 'delete' keyPartner}}>Delete </button>
+  </div>
+
+  <div class="row">
+    {{update-form thisComponent=keyPartner hasCustomerSegment=false update="update"}}
+
+    <button {{action 'delete' keyPartner}}>Delete </button>
+
+  </div>
 
 {{/each}}
