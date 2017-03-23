@@ -35,12 +35,21 @@ export default Ember.Route.extend({
       this.transitionTo('business', plan);
     },
 
-    // error in the plan.get line undefined object for plan....
+
     saveCustomerRelationship(params){
       var newCustomerRelationship = this.store.createRecord('customerRelationship', params);
       var plan = params.plan;
       plan.get('customerRelationships').addObject(newCustomerRelationship);
       newCustomerRelationship.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+    saveSalesChannel(params){
+      var newSalesChannel = this.store.createRecord('salesChannel', params);
+      var plan = params.plan;
+      plan.get('salesChannels').addObject(newSalesChannel);
+      newSalesChannel.save().then(function(){
         return plan.save();
       });
       this.transitionTo('business', plan);

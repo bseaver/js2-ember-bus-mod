@@ -1,0 +1,25 @@
+{{#if addNewSalesChannel}}
+  <p>New Sales Channel</p>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="tag">Tag</label>
+        {{input value=tag id="tag"}}
+      </div>
+
+      <div class="form-group">
+        <label for="customerSegment">customerSegment</label>
+        {{input value=customerSegment id="customerSegment"}}
+      </div>
+
+      <div class="form-group">
+        <label for="details">details</label>
+        {{input value=details id="details"}}
+      </div>
+
+      <button {{action 'saveSalesChannel'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'salesChannelFormShow'}}>Add a Sales Channel</button>
+{{/if}}
