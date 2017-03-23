@@ -1,22 +1,16 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  addNewCustomerSegment: false,
   actions: {
-    customerSegmentFormShow() {
-      this.set('addNewCustomerSegment', true);
+    update(segment, params) {
+      this.sendAction('update', segment, params);
     },
 
-    saveCustomerSegment(plan) {
-      console.log(plan.date);
-      var params = {
-        branch: "customerSegments",
-        record: "new",
-        tag: this.get('tag'),
-        details: this.get('details')
-      };
-      this.set('addNewCustomerSegment', false);
-      this.sendAction('updatePlan', plan, params);
+    delete(segment) {
+      if (confirm('Are you sure you want to delete this customer segment?')) {
+        this.sendAction('destroySegment', segment);
+      }
     }
+
   }
 });

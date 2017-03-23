@@ -1,5 +1,5 @@
-{{#if addNewCustomerSegment}}
-  <p>New Customer Segment</p>
+{{#if addNewKeyActivity}}
+  <p>New Key Activity</p>
   <div>
     <form>
       <div class="form-group">
@@ -12,9 +12,9 @@
         {{input value=details id="details"}}
       </div>
 
-      <button {{action 'saveCustomerSegment'}}>Save</button>
+      <button {{action 'saveKeyActivity'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'customerSegmentFormShow'}}>Add a Customer Segment</button>
+  <button {{action 'keyActivityFormShow'}}>Add a Key Activity</button>
 {{/if}}

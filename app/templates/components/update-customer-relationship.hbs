@@ -1,0 +1,25 @@
+{{#if updateCustomerRelationshipForm}}
+  <p><strong>Update Customer Relationship</strong></p>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="tag">Tag</label>
+        {{input value=tag id="tag"}}
+      </div>
+
+      <div class="form-group">
+        <label for="details">customerSegment</label>
+        {{input value=customerSegment id="customerSegment"}}
+      </div>
+
+      <div class="form-group">
+        <label for="details">details</label>
+        {{input value=details id="details"}}
+      </div>
+
+      <button {{action 'update' segment}}>Update</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'updateCustomerRelationshipForm'}}>Update</button>
+{{/if}}

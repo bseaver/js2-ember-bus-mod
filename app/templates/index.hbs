@@ -1,10 +1,12 @@
 <h2>Welcome to our site</h2>
 <h3>This is site for developing and tracking your business models.</h3>
 
-<button>New model</button>
+{{new-plan savePlan="savePlan"}}
 
 
 <h3>Current Models</h3>
+<!-- loops through each business model plan in the data store -->
 {{#each model as |plan|}}
+  <!-- passes individual plan to business-model-tile to show titles of plans -->
   {{business-model-tile plan=plan}}
 {{/each}}

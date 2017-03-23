@@ -2,25 +2,106 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model(params) {
-    // returns a specific record based on rental id as model to rental template
     return this.store.findRecord('plan', params.plan_id);
   },
   actions: {
-    updatePlan(plan, params) {
-      console.log(plan.date);
-      var branch = params['branch'];
-      var record = params['record'];
-      if (typeof record !== "number") {
-        record = branch.length;
-      }
-      if ('tag' in params && typeof params['tag'] !== undefined) {
-        plan[branch][record]['tag'] = params['tag'];
-      }
-      if ('details' in params && typeof params['details'] !== undefined) {
-        plan[branch][record]['details'] = params['details'];
-      }
-      plan.save();
+    saveCustomerSegment(params) {
+      var newCustomerSegment = this.store.createRecord('customerSegment', params);
+      var plan = params.plan;
+      plan.get('customerSegments').addObject(newCustomerSegment);
+      newCustomerSegment.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+    saveCostStructure(params) {
+      var newCostStructure = this.store.createRecord('costStructure', params);
+      var plan = params.plan;
+      plan.get('costStructures').addObject(newCostStructure);
+      newCostStructure.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+
+
+
+    saveKeyPartner(params){
+      var newKeyPartner = this.store.createRecord('keyPartner', params);
+      var plan = params.plan;
+      plan.get('keyPartners').addObject(newKeyPartner);
+      newKeyPartner.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+
+    saveKeyActivity(params){
+      var newKeyActivity = this.store.createRecord('keyActivity', params);
+      var plan = params.plan;
+      plan.get('keyActivitys').addObject(newKeyActivity);
+      newKeyActivity.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+
+
+    saveCustomerRelationship(params){
+      var newCustomerRelationship = this.store.createRecord('customerRelationship', params);
+      var plan = params.plan;
+      plan.get('customerRelationships').addObject(newCustomerRelationship);
+      newCustomerRelationship.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+    saveSalesChannel(params){
+      var newSalesChannel = this.store.createRecord('salesChannel', params);
+      var plan = params.plan;
+      plan.get('salesChannels').addObject(newSalesChannel);
+      newSalesChannel.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+    saveRevenueStream(params){
+      var newRevenueStream = this.store.createRecord('revenueStream', params);
+      var plan = params.plan;
+      plan.get('revenueStreams').addObject(newRevenueStream);
+      newRevenueStream.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+    saveValueProposition(params){
+      var newValueProposition = this.store.createRecord('valueProposition', params);
+      var plan = params.plan;
+      plan.get('valuePropositions').addObject(newValueProposition);
+      newValueProposition.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+
+    update(tempObject, params){
+      Object.keys(params).forEach(function(key){
+        if(params[key]!==undefined){
+          tempObject.set(key,params[key]);
+        }
+      });
+
+      tempObject.save();
       this.transitionTo('business');
+    },
+    destroySegment(segment){
+      segment.destroyRecord();
+      this.transitionTo('business');
+    },
+    destroyRelationship(relationship){
+      relationship.destroyRecord();
+      this.transitionTo('business')
     }
   }
+
 });

@@ -1,66 +1,67 @@
 <div class="row">
-  <h2 class="text-center">Title: {{model.title}}, Version: {{model.version}}, Author: {{model.author}}, Date: {{model.date}}</h2>
+  <h2 class="text-center">{{model.title}} Version: {{model.version}}, Author: {{model.author}}, Date: {{model.date}}</h2>
 
 </div>
 <div class="row">
   <div class="col-lg-2">
     <div class="well long">
-      {{key-partners keyPartners=model.keyPartners}}
-
+      {{key-partners plan=model}}
+      {{new-key-partner saveKeyPartner="saveKeyPartner" plan=model}}
     </div>
   </div>
   <div class="col-lg-2">
     <div class="row">
       <div class="well short">
-        {{key-activities}}
-
+        {{key-activities plan=model}}
+        {{new-key-activity saveKeyActivity="saveKeyActivity" plan=model}}
       </div>
     </div>
     <div class="row">
       <div class="well short">
-        {{key-resources}}
-
+        {{key-resources plan=model}}
+        {{new-key-resources saveKeyResource="saveKeyResource" plan=model}}
       </div>
     </div>
   </div>
   <div class="col-lg-4">
     <div class="well long">
-      {{value-propositions}}
-
+      {{value-propositions plan=model}}
+      {{new-value-proposition saveValueProposition="saveValueProposition" plan=model}}
     </div>
   </div>
   <div class="col-lg-2">
     <div class="row">
       <div class="well short">
-        {{customer-relationships}}
+        {{customer-relationships plan=model update="update" destroyRelationship="destroyRelationship"}}
+        {{new-customer-relationship saveCustomerRelationship="saveCustomerRelationship" plan=model}}
 
       </div>
     </div>
     <div class="row">
       <div class="well short">
-        {{sales-channels}}
-
+        {{sales-channels plan=model}}
+        {{new-sales-channel saveSalesChannel="saveSalesChannel" plan=model}}
       </div>
     </div>
   </div>
   <div class="col-lg-2">
     <div class="well long">
-      {{customer-segments plan=model updatePlan="updatePlan"}}
-
+      {{customer-segments plan=model update="update" destroySegment="destroySegment"}}
+      {{new-customer-segment saveCustomerSegment="saveCustomerSegment" plan=model}}
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-6">
     <div class="well short">
-      {{cost-structures}}
-
+      {{cost-structures plan=model}}
+      {{new-cost-structure saveCostStructure="saveCostStructure" plan=model}}
     </div>
   </div>
   <div class="col-lg-6">
     <div class="well short">
-      {{revenue-streams}}
-
+      {{revenue-streams plan=model}}
+      {{new-revenue-stream saveRevenueStream="saveRevenueStream" plan=model}}
     </div>
   </div>
 </div>

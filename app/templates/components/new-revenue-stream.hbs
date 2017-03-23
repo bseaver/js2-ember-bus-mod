@@ -1,0 +1,25 @@
+{{#if addNewRevenueStream}}
+  <p>New Revenue Stream</p>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="tag">Tag</label>
+        {{input value=tag id="tag"}}
+      </div>
+
+      <div class="form-group">
+        <label for="customerSegment">customerSegment</label>
+        {{input value=customerSegment id="customerSegment"}}
+      </div>
+
+      <div class="form-group">
+        <label for="details">details</label>
+        {{input value=details id="details"}}
+      </div>
+
+      <button {{action 'saveRevenueStream'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'revenueStreamFormShow'}}>Add a Revenue Stream</button>
+{{/if}}

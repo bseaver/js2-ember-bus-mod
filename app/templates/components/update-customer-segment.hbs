@@ -1,5 +1,5 @@
-{{#if addNewCustomerSegment}}
-  <p>New Customer Segment</p>
+{{#if updateCustomerSegmentForm}}
+  <p><strong>Update Customer Segment</strong></p>
   <div>
     <form>
       <div class="form-group">
@@ -12,9 +12,9 @@
         {{input value=details id="details"}}
       </div>
 
-      <button {{action 'saveCustomerSegment'}}>Save</button>
+      <button {{action 'update' segment}}>Update</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'customerSegmentFormShow'}}>Add a Customer Segment</button>
+  <button {{action 'updateCustomerSegmentForm'}}>Update</button>
 {{/if}}

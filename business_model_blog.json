@@ -1,61 +1,62 @@
-{"plans": [{
+{
+"plans": [{
   "title": "Bars business",
   "version": "1.0",
   "author": "Jimmy Bob",
-  "date": "12/31/14",
-  "keyPartners": [
-    {"tag": "Nike",
-    "details": "Shelf space"
-    }],
-  "keyActivities": [
-    {"tag": "Call Nike Reps",
-      "details": "Ask for Shelf space"
-    }],
-  "keyResources": [
-    {"tag": "Kitchen",
-      "details": "1000 bars per day"
-    },
-    {"tag": "Sam Smith",
-      "details": "Ex powerbar exec with Nike relationships"
-    }],
-  "valuePropositions": [
-    {"tag": "Price",
-      "customerSegment": "Mass Market",
-      "details": "Lowest 12gram bar on market"
-    }],
-  "customerRelationships": [
-    {"tag": "Customer Acquisition",
-      "customerSegment": "Mass Market",
-      "details": "self service kiosks featuring low cost"
-    }],
-  "salesChannels": [
-    {"tag": "Web Sales",
-      "customerSegment": "Mass Market",
-      "details": "google ad words puchased for Nike purchases"
-    },
-    {"tag": "Food Wholesalers",
-      "customerSegment": "Mass Market",
-      "details": "Cisco control 80% of floor space on Nike"
-    }],
-  "customerSegments": [
-    {"tag": "Mass Market",
-      "details": "200 Million Americans consider Nike"
-    }],
-  "costStructures": [
-    {"tag": "Fixed Costs",
-      "details": "Salary for Sam Smith, lease on kitchens, etc"
-    },
-    {"tag": "Variable Costs",
-      "details": "Ingredients, google ad words etc"
-    }],
-  "revenueStreams": [
-    {"tag": "Asset Sales",
-      "customerSegment": "Mass Market",
-      "details": "80% of revenue"
-    },
-    {"tag": "Licensing",
-      "customerSegment": "Private Label",
-      "details": "Create private label bars for personal trainors"
-    }]
+  "date": "12/31/14"
+  }],
+"keyPartners": [{
+  "tag": "Nike",
+  "details": "Shelf space"
+  }],
+"keyActivities": [{
+  "tag": "Call Nike Reps",
+  "details": "Ask for Shelf space"
+  }],
+"keyResources": [{
+  "tag": "Kitchen",
+  "details": "1000 bars per day"
+  },{
+  "tag": "Sam Smith",
+  "details": "Ex powerbar exec with Nike relationships"
+  }],
+"valuePropositions": [{
+  "tag": "Price",
+  "customerSegment": "Mass Market",
+  "details": "Lowest 12gram bar on market"
+  }],
+"customerRelationships": [{
+  "tag": "Customer Acquisition",
+  "customerSegment": "Mass Market",
+  "details": "self service kiosks featuring low cost"
+  }],
+"salesChannels": [{
+  "tag": "Web Sales",
+  "customerSegment": "Mass Market",
+  "details": "google ad words puchased for Nike purchases"
+  },{
+  "tag": "Food Wholesalers",
+  "customerSegment": "Mass Market",
+  "details": "Cisco control 80% of floor space on Nike"
+  }],
+"customerSegments": [{
+  "tag": "Mass Market",
+  "details": "200 Million Americans consider Nike"
+  }],
+"costStructures": [{
+  "tag": "Fixed Costs",
+  "details": "Salary for Sam Smith, lease on kitchens, etc"
+  },{
+  "tag": "Variable Costs",
+  "details": "Ingredients, google ad words etc"
+  }],
+"revenueStreams": [{
+  "tag": "Asset Sales",
+  "customerSegment": "Mass Market",
+  "details": "80% of revenue"
+  },{
+  "tag": "Licensing",
+  "customerSegment": "Private Label",
+  "details": "Create private label bars for personal trainors"
   }]
 }

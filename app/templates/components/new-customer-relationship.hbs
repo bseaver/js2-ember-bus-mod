@@ -1,0 +1,25 @@
+{{#if addNewCustomerRelationship}}
+  <p>New Customer Relationship</p>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="tag">Tag</label>
+        {{input value=tag id="tag"}}
+      </div>
+
+      <div class="form-group">
+        <label for="customerSegment">customerSegment</label>
+        {{input value=customerSegment id="customerSegment"}}
+      </div>
+
+      <div class="form-group">
+        <label for="details">details</label>
+        {{input value=details id="details"}}
+      </div>
+
+      <button {{action 'saveCustomerRelationship'}}>Save</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'customerRelationshipFormShow'}}>Add a Customer Relationship</button>
+{{/if}}
