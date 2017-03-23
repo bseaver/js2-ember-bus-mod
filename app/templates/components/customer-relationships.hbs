@@ -6,7 +6,7 @@
   </ul>
   <div class="row">
     <div class="col-sm-6">
-      {{update-customer-relationship relationship=relationship update="update"}}
+      {{update-form thisComponent=relationship hasCustomerSegment=true update="update"}}
     </div>
     <div class="col-sm-6">
       <button {{action 'delete' relationship}}>Delete </button>
