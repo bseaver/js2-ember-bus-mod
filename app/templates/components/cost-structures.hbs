@@ -1,4 +1,15 @@
 <h3>Cost Structures</h3>
 {{#each plan.costStructures as |costStructure|}}
-  <p>{{costStructure.tag}}</p>
+{{costStructure.tag}}
+  <ul>
+    <li>{{costStructure.details}}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-6">
+      {{update-cost-structure costStructure=costStructure update="update"}}
+    </div>
+    <div class="col-sm-6">
+      <button {{action 'delete' costStructure}}>Delete </button>
+    </div>
+  </div>
 {{/each}}

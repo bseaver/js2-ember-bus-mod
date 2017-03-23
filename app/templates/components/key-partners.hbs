@@ -1,4 +1,15 @@
 <h3>Key Partners</h3>
 {{#each plan.keyPartners as |keyPartner|}}
-  <p>{{keyPartner.tag}}</p>
+  {{keyPartner.tag}}
+  <ul>
+    <li>{{keyPartner.details}}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-6">
+      {{update-key-partners keyPartner=keyPartner update="update"}}
+    </div>
+    <div class="col-sm-6">
+      <button {{action 'delete' keyPartner}}>Delete </button>
+    </div>
+  </div>
 {{/each}}

@@ -1,4 +1,15 @@
 <h3>Key Activities</h3>
 {{#each plan.keyActivities as |keyActivity|}}
-  <p>{{keyActivity.tag}}</p>
+  {{keyActivity.tag}}
+  <ul>
+    <li>{{keyActivity.details}}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-6">
+      {{update-key-activities keyActivity=keyActivity update="update"}}
+    </div>
+    <div class="col-sm-6">
+      <button {{action 'delete' keyActivity}}>Delete </button>
+    </div>
+  </div>
 {{/each}}

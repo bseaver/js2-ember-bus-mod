@@ -1,4 +1,15 @@
 <h3>Revenue Streams</h3>
 {{#each plan.revenueStreams as |revenueStream|}}
-  <p>{{revenueStream.tag}}</p>
+  {{revenueStream.tag}}
+  <ul>
+    <li>{{revenueStream.details}}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-6">
+      {{update-revenue-streams revenueStream=revenueStream update="update"}}
+    </div>
+    <div class="col-sm-6">
+      <button {{action 'delete' revenueStream}}>Delete </button>
+    </div>
+  </div>
 {{/each}}

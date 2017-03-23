@@ -1,4 +1,15 @@
 <h3>Sales Channels</h3>
 {{#each plan.salesChannels as |salesChannel|}}
-  <p>{{salesChannel.tag}}</p>
+  {{salesChannel.tag}}
+  <ul>
+    <li>{{salesChannel.details}}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-6">
+      {{update-sales-channels salesChannel=salesChannel update="update"}}
+    </div>
+    <div class="col-sm-6">
+      <button {{action 'delete' salesChannel}}>Delete </button>
+    </div>
+  </div>
 {{/each}}

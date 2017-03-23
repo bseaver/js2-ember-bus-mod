@@ -1,1 +1,15 @@
 <h3>Key Resources</h3>
+{{#each plan.keyResources as |keyResource|}}
+  {{keyResource.tag}}
+  <ul>
+    <li>{{keyResource.details}}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-6">
+      {{update-key-resources keyResource=keyResource update="update"}}
+    </div>
+    <div class="col-sm-6">
+      <button {{action 'delete' keyResource}}>Delete </button>
+    </div>
+  </div>
+{{/each}}
