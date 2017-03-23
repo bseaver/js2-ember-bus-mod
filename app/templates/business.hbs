@@ -1,12 +1,12 @@
 <div class="row">
-  <h2 class="text-center">Title: {{model.title}}, Version: {{model.version}}, Author: {{model.author}}, Date: {{model.date}}</h2>
+  <h2 class="text-center">{{model.title}} Version: {{model.version}}, Author: {{model.author}}, Date: {{model.date}}</h2>
 
 </div>
 <div class="row">
   <div class="col-lg-2">
     <div class="well long">
-      {{key-partners}}
-
+      {{key-partners plan=model}}
+      {{new-key-partner saveKeyPartner="saveKeyPartner" plan=model}}
     </div>
   </div>
   <div class="col-lg-2">
@@ -32,7 +32,8 @@
   <div class="col-lg-2">
     <div class="row">
       <div class="well short">
-        {{customer-relationships}}
+        {{customer-relationships plan=model update="update" destroyRelationship="destroyRelationship"}}
+        {{new-customer-relationship saveCustomerRelationship="saveCustomerRelationship" plan=model}}
 
       </div>
     </div>
@@ -45,8 +46,8 @@
   </div>
   <div class="col-lg-2">
     <div class="well long">
-      {{customer-segments plan=model}}
-      {{new-customer-segment saveCustomerSegment="saveCustomerSegment" plan=model }}
+      {{customer-segments plan=model update="update" destroySegment="destroySegment"}}
+      {{new-customer-segment saveCustomerSegment="saveCustomerSegment" plan=model}}
 
     </div>
   </div>

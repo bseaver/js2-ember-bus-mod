@@ -1,1 +1,17 @@
 <h3>Customer Relationships</h3>
+{{#each plan.customerRelationships as |relationship|}}
+{{relationship.tag}} | {{relationship.customerSegment}}
+  <ul>
+    <li>{{relationship.details}}</li>
+  </ul>
+  <div class="row">
+    <div class="col-sm-6">
+      {{update-customer-relationship relationship=relationship update="update"}}
+    </div>
+    <div class="col-sm-6">
+      <button {{action 'delete' segment}}>Delete </button>
+    </div>
+  </div>
+
+
+{{/each}}
