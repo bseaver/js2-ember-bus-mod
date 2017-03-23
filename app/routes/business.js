@@ -34,6 +34,15 @@ export default Ember.Route.extend({
       });
       this.transitionTo('business', plan);
     },
+    saveKeyResource(params){
+      var newKeyResource = this.store.createRecord('keyResource', params);
+      var plan = params.plan;
+      plan.get('keyResources').addObject(newKeyResource);
+      newKeyResource.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
 
     saveKeyActivity(params){
       var newKeyActivity = this.store.createRecord('keyActivity', params);

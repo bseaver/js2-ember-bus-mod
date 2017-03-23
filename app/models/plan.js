@@ -8,7 +8,7 @@ export default DS.Model.extend({
   "costStructures": DS.hasMany('costStructure', { async: true }),
   "customerRelationships": DS.hasMany('customerRelationship', { async: true }),
   "customerSegments": DS.hasMany('customerSegment', { async: true }),
-  // for some reason to come back to later keyResources errored out
+  "keyResources": DS.hasMany('keyResource', { async: true}),
   "keyActivities": DS.hasMany('keyActivity', { async: true}),
   "keyPartners": DS.hasMany('keyPartner', { async: true}),
   "revenueStreams": DS.hasMany('revenueStream', { async: true}),
