@@ -93,17 +93,13 @@ export default Ember.Route.extend({
       tempObject.save();
       this.transitionTo('business');
     },
-    destroySegment(segment){
-      segment.destroyRecord();
-      this.transitionTo('business');
-    },
+
     destroyComponent(thisComponent, thisComponentName){
-      console.log(thisComponent.get('tag'));
-      if (confirm('Delete ""' + thisComponent.get('tag') + '"" ' + thisComponentName + '?')) {
+      if (confirm('Delete "' + thisComponent.get('tag') + '" ' + thisComponentName + '?')) {
         thisComponent.destroyRecord();
         this.transitionTo('business');
       }
-    },
+    }
   }
 
 });
