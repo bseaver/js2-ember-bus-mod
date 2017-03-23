@@ -19,6 +19,9 @@ You will need the following things properly installed on your computer.
 * `cd bus-mod`
 * `npm install`
 * `bower install`
+* Create or Access your Firebase account for using this business plann app then
+  * Copy config/sample-environment.js to config/environment.js
+  * Update Firebase section in that environment.js file with your info.
 
 ## Running / Development
 
