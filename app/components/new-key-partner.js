@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   addNewKeyPartner: false,
   actions: {
     keyPartnerFormShow() {
+      // this.sendAction('hideForms');
       this.set('addNewKeyPartner', true);
     },
     saveKeyPartner() {

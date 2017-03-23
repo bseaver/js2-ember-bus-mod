@@ -5,6 +5,10 @@ export default Ember.Route.extend({
     return this.store.findRecord('plan', params.plan_id);
   },
   actions: {
+    // hideForms(){
+    //   this.transitionTo('business');
+    // },
+
     saveCustomerSegment(params) {
       var newCustomerSegment = this.store.createRecord('customerSegment', params);
       var plan = params.plan;
@@ -93,7 +97,6 @@ export default Ember.Route.extend({
     },
 
     update(tempObject, params){
-      console.log('trigger');
       Object.keys(params).forEach(function(key){
         if(params[key]!==undefined){
           tempObject.set(key,params[key]);

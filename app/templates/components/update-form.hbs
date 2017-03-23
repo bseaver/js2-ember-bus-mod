@@ -4,19 +4,19 @@
     <form>
       <div class="form-group">
         <label for="tag">Tag</label>
-        {{input value=thisComponent.tag id="tag"}}
+        {{input value=thisComponent.tag class="tag"}}
       </div>
 
       {{#if hasCustomerSegment}}
         <div class="form-group">
           <label for="details">Customer Segment</label>
-          {{input value=thisComponent.customerSegment id="customerSegment"}}
+          {{input value=thisComponent.customerSegment class="customerSegment"}}
         </div>
       {{/if}}
 
       <div class="form-group">
         <label for="details">Details</label>
-        {{textarea rows="5" value=thisComponent.details id="details"}}
+        {{textarea rows="5" value=thisComponent.details class="details"}}
       </div>
 
       <button {{action 'update' thisComponent}}>Update</button>
