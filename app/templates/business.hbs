@@ -5,27 +5,27 @@
 <div class="row">
   <div class="col-lg-2">
     <div class="well long">
-      {{key-partners plan=model destroyComponent="destroyComponent"}}
+      {{key-partners plan=model update="update" destroyComponent="destroyComponent"}}
       {{new-key-partner saveKeyPartner="saveKeyPartner" plan=model}}
     </div>
   </div>
   <div class="col-lg-2">
     <div class="row">
       <div class="well short">
-        {{key-activities plan=model destroyComponent="destroyComponent"}}
+        {{key-activities plan=model update="update" destroyComponent="destroyComponent"}}
         {{new-key-activity saveKeyActivity="saveKeyActivity" plan=model}}
       </div>
     </div>
     <div class="row">
       <div class="well short">
-        {{key-resources plan=model destroyComponent="destroyComponent"}}
+        {{key-resources plan=model update="update" destroyComponent="destroyComponent"}}
         {{new-key-resources saveKeyResource="saveKeyResource" plan=model}}
       </div>
     </div>
   </div>
   <div class="col-lg-4">
     <div class="well long">
-      {{value-propositions plan=model destroyComponent="destroyComponent"}}
+      {{value-propositions plan=model update="update" destroyComponent="destroyComponent"}}
       {{new-value-proposition saveValueProposition="saveValueProposition" plan=model}}
     </div>
   </div>
@@ -39,7 +39,7 @@
     </div>
     <div class="row">
       <div class="well short">
-        {{sales-channels plan=model destroyComponent="destroyComponent"}}
+        {{sales-channels plan=model update="update" destroyComponent="destroyComponent"}}
         {{new-sales-channel saveSalesChannel="saveSalesChannel" plan=model}}
       </div>
     </div>
@@ -54,13 +54,13 @@
 <div class="row">
   <div class="col-lg-6">
     <div class="well short">
-      {{cost-structures plan=model destroyComponent="destroyComponent"}}
+      {{cost-structures plan=model update="update" destroyComponent="destroyComponent"}}
       {{new-cost-structure saveCostStructure="saveCostStructure" plan=model}}
     </div>
   </div>
   <div class="col-lg-6">
     <div class="well short">
-      {{revenue-streams plan=model destroyComponent="destroyComponent"}}
+      {{revenue-streams plan=model update="update" destroyComponent="destroyComponent"}}
       {{new-revenue-stream saveRevenueStream="saveRevenueStream" plan=model}}
     </div>
   </div>

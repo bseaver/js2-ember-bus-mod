@@ -6,7 +6,7 @@
   </ul>
   <div class="row">
     <div class="col-sm-6">
-      {{update-revenue-streams revenueStream=revenueStream update="update"}}
+      {{update-form thisComponent=revenueStream hasCustomerSegment=true update="update"}}
     </div>
     <div class="col-sm-6">
       <button {{action 'delete' revenueStream}}>Delete </button>

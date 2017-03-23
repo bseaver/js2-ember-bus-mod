@@ -84,6 +84,7 @@ export default Ember.Route.extend({
     },
 
     update(tempObject, params){
+      console.log('trigger');
       Object.keys(params).forEach(function(key){
         if(params[key]!==undefined){
           tempObject.set(key,params[key]);
