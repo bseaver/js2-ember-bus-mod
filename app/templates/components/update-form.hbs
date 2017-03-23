@@ -4,19 +4,19 @@
     <form>
       <div class="form-group">
         <label for="tag">Tag</label>
-        {{input value=tag id="tag"}}
+        {{input value=thisComponent.tag id="tag"}}
       </div>
 
       {{#if hasCustomerSegment}}
         <div class="form-group">
-          <label for="details">customerSegment</label>
-          {{input value=customerSegment id="customerSegment"}}
+          <label for="details">Customer Segment</label>
+          {{input value=thisComponent.customerSegment id="customerSegment"}}
         </div>
       {{/if}}
 
       <div class="form-group">
-        <label for="details">details</label>
-        {{input value=details id="details"}}
+        <label for="details">Details</label>
+        {{input value=thisComponent.details id="details"}}
       </div>
 
       <button {{action 'update' thisComponent}}>Update</button>

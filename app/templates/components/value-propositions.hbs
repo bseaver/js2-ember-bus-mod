@@ -1,6 +1,6 @@
 <h3>Value Propositions</h3>
 {{#each plan.valuePropositions as |valueProposition|}}
-  {{valueProposition.tag}}
+  {{valueProposition.tag}} | {{valueProposition.customerSegment}}
   <ul>
     <li>{{valueProposition.details}}</li>
   </ul>

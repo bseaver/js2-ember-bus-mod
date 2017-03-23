@@ -1,6 +1,6 @@
 <h3>Sales Channels</h3>
 {{#each plan.salesChannels as |salesChannel|}}
-  {{salesChannel.tag}}
+  {{salesChannel.tag}} | {{salesChannel.customerSegment}}
   <ul>
     <li>{{salesChannel.details}}</li>
   </ul>

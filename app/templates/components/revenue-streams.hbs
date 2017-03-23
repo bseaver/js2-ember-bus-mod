@@ -1,6 +1,6 @@
 <h3>Revenue Streams</h3>
 {{#each plan.revenueStreams as |revenueStream|}}
-  {{revenueStream.tag}}
+  {{revenueStream.tag}} | {{revenueStream.customerSegment}}
   <ul>
     <li>{{revenueStream.details}}</li>
   </ul>
