@@ -25,6 +25,16 @@ export default Ember.Route.extend({
       this.transitionTo('business', plan);
     },
 
+    saveKeyActivity(params){
+      var newKeyActivity = this.store.createRecord('keyActivity', params);
+      var plan = params.plan;
+      plan.get('keyActivitys').addObject(newKeyActivity);
+      newKeyActivity.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+
     // error in the plan.get line undefined object for plan....
     saveCustomerRelationship(params){
       var newCustomerRelationship = this.store.createRecord('customerRelationship', params);
