@@ -97,9 +97,12 @@ export default Ember.Route.extend({
       segment.destroyRecord();
       this.transitionTo('business');
     },
-    destroyComponent(thisComponent){
-      thisComponent.destroyRecord();
-      this.transitionTo('business')
+    destroyComponent(thisComponent, thisComponentName){
+      console.log(thisComponent.get('tag'));
+      if (confirm('Delete ""' + thisComponent.get('tag') + '"" ' + thisComponentName + '?')) {
+        thisComponent.destroyRecord();
+        this.transitionTo('business');
+      }
     },
   }
 

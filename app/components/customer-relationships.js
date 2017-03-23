@@ -7,9 +7,10 @@ export default Ember.Component.extend({
     },
 
     delete(relationship) {
-      if (confirm('Are you sure you want to delete this customer relationship?')) {
-        this.sendAction('destroyComponent', relationship);
-      }
+      // if (confirm('Are you sure you want to delete this customer relationship?')) {
+        console.log(relationship.get('tag'));
+        this.sendAction('destroyComponent', relationship, 'customer relationship');
+      // }
     }
 
   }
