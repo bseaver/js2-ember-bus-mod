@@ -18,15 +18,15 @@
     </div>
     <div class="row">
       <div class="well short">
-        {{key-resources}}
-
+        {{key-resources plan=model}}
+        {{new-key-resources saveKeyResource="saveKeyResource" plan=model}}
       </div>
     </div>
   </div>
   <div class="col-lg-4">
     <div class="well long">
-      {{value-propositions}}
-
+      {{value-propositions plan=model}}
+      {{new-value-proposition saveValueProposition="saveValueProposition" plan=model}}
     </div>
   </div>
   <div class="col-lg-2">
@@ -48,21 +48,20 @@
     <div class="well long">
       {{customer-segments plan=model update="update" destroySegment="destroySegment"}}
       {{new-customer-segment saveCustomerSegment="saveCustomerSegment" plan=model}}
-
     </div>
   </div>
 </div>
 <div class="row">
   <div class="col-lg-6">
     <div class="well short">
-      {{cost-structures}}
-
+      {{cost-structures plan=model}}
+      {{new-cost-structure saveCostStructure="saveCostStructure" plan=model}}
     </div>
   </div>
   <div class="col-lg-6">
     <div class="well short">
-      {{revenue-streams}}
-
+      {{revenue-streams plan=model}}
+      {{new-revenue-stream saveRevenueStream="saveRevenueStream" plan=model}}
     </div>
   </div>
 </div>

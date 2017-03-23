@@ -14,6 +14,17 @@ export default Ember.Route.extend({
       });
       this.transitionTo('business', plan);
     },
+    saveCostStructure(params) {
+      var newCostStructure = this.store.createRecord('costStructure', params);
+      var plan = params.plan;
+      plan.get('costStructures').addObject(newCostStructure);
+      newCostStructure.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+
+
 
     saveKeyPartner(params){
       var newKeyPartner = this.store.createRecord('keyPartner', params);
@@ -50,6 +61,24 @@ export default Ember.Route.extend({
       var plan = params.plan;
       plan.get('salesChannels').addObject(newSalesChannel);
       newSalesChannel.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+    saveRevenueStream(params){
+      var newRevenueStream = this.store.createRecord('revenueStream', params);
+      var plan = params.plan;
+      plan.get('revenueStreams').addObject(newRevenueStream);
+      newRevenueStream.save().then(function(){
+        return plan.save();
+      });
+      this.transitionTo('business', plan);
+    },
+    saveValueProposition(params){
+      var newValueProposition = this.store.createRecord('valueProposition', params);
+      var plan = params.plan;
+      plan.get('valuePropositions').addObject(newValueProposition);
+      newValueProposition.save().then(function(){
         return plan.save();
       });
       this.transitionTo('business', plan);
